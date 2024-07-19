@@ -81,3 +81,21 @@
   src: local("Poppins-ThinItalic"),
     url("./fonts/Poppins-ThinItalic.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Poppins-Bold-Subheading3";
+  src: local("Poppins-Bold-Subheading3"),
+    url("./fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Poppins-Thin-Regular";
+  src: local("Poppins-Thin-Regular"),
+    url("./fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-size: 5px;
+}
