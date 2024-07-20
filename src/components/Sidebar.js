@@ -75,7 +75,7 @@ const dashboardMenus = [
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState(dashboardMenus);
-  const handleClick = (val) => {
+  const handleTabClick = (val) => {
     for (let i = 0; i < dashboardMenus.length; i++) {
       if (val.id === dashboardMenus[i].id) {
         dashboardMenus[i].isActiveTab = true;
@@ -102,7 +102,7 @@ const Sidebar = () => {
                     val?.isActiveTab && "active"
                   }`}
                   key={val.id}
-                  onClick={() => handleClick(val)}
+                  onClick={() => handleTabClick(val)}
                 >
                   <img
                     src={val?.isActiveTab === true ? val?.active : val?.icon}

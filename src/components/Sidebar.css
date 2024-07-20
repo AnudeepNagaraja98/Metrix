@@ -1,11 +1,9 @@
 .sidebar_container {
-  height: 100%;
-  width: 17.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid red;
   padding: 0.5em;
+  height: 100%;
 }
 
 .logo_section {
@@ -71,7 +69,7 @@
 
 .notification_wrapper {
   border-radius: 50%;
-  background-color: rgba(255, 204, 145, 1);
+  background-color: #ffcc91;
   height: 18px;
   width: 18px;
 }
