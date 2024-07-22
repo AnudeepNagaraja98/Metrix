@@ -1,0 +1,57 @@
+.orders_wrapper {
+  display: flex;
+  height: 3.5em;
+  border-bottom: 1px solid #f1f3f9;
+  padding-bottom: 0.25em;
+}
+
+.image_section {
+  flex-basis: 15%;
+  align-self: center;
+}
+
+.description {
+  flex-basis: 65%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.name_heading {
+  font-family: "Poppins-Regular";
+  color: #45464e;
+  font-size: 12.5px;
+  font-weight: 400;
+}
+
+.price_heading {
+  font-family: "Poppins-Medium";
+  color: #33343a;
+  font-size: 14px;
+  font-weight: 500;
+}
+.status_and_date {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.date_heading {
+  color: #a6a8b1;
+  font-family: "Poppins-Regular";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.status_section {
+  font-family: "Poppins-Regular";
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0.2em 0.75em;
+  border-radius: 0.75em;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
+import Orders from "../../components/Orders";
 import "./Home.css";
 
 const Home = () => {
@@ -30,7 +31,14 @@ const Home = () => {
           </div>
           <div className="order_section">
             <div className="order_card">Order Card</div>
-            <div className="recent_cards">Recent Card</div>
+            <div className="recent_cards">
+              <div className="heading_section">
+                <p className="card_heading">Recent Orders</p>
+              </div>
+              <div className="orders">
+                <Orders />
+              </div>
+            </div>
           </div>
         </div>
       </div>
