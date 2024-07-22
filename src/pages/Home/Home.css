@@ -18,6 +18,72 @@
 }
 
 .home_body {
-  flex-basis: 90%;
-  background-color: #e6e6e6;
+  display: flex;
+  gap: 1em;
+  height: 100%;
+}
+
+.sales_section {
+  flex-basis: 65%;
+  height: 100%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.sales_cards_section {
+  display: flex;
+  gap: 1em;
+  flex-basis: 30%;
+  border: 1px solid red;
+}
+
+.sales_cards {
+  flex-basis: 50%;
+}
+
+.marketing_graph {
+  display: flex;
+  height: 100%;
+  gap: 1em;
+  flex-basis: 40%;
+}
+
+.pie_graph {
+  flex-basis: 50%;
+  border: 1px solid red;
+}
+
+.marketing_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-basis: 50%;
+}
+
+.marketing_card {
+  flex-basis: 50%;
+  border: 1px solid red;
+}
+
+.summary_graph {
+  flex-basis: 30%;
+  border: 1px solid red;
+}
+
+.order_section {
+  flex-basis: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.order_card {
+  flex-basis: 30%;
+  border: 1px solid red;
+}
+
+.recent_cards {
+  flex-basis: 73%;
+  border: 1px solid red;
 }
