@@ -8,6 +8,9 @@ import Users from "../../icons/2 User.svg";
 import Bag from "../../icons/Bag.svg";
 import FolderBody from "../../icons/Folder-Body.svg";
 import Cart from "../../icons/Cart-Body.svg";
+import ChevDown from "../../icons/Chev-Down.svg";
+import Highcharts from "highcharts/highstock";
+import HighchartsReact from "highcharts-react-official";
 import "./Home.css";
 
 const graphCard = {
@@ -76,6 +79,76 @@ const cartProducts = {
   isActive: false,
 };
 
+const getOptions = (type) => ({
+  chart: {
+    type: type,
+    width: 150,
+    height: 150,
+    tooltip: {
+      pointFormat: false,
+    },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 150,
+            maxHeight: 150,
+          },
+          chartOptions: {
+            legend: {
+              enabled: false,
+            },
+          },
+        },
+      ],
+    },
+  },
+  plotOptions: {
+    series: {
+      borderWidth: 0,
+    },
+    type: type,
+    size: "100%",
+    innerSize: "90%",
+    dataLabels: {
+      distance: "-20px",
+    },
+  },
+  title: {
+    text: "",
+  },
+  credits: {
+    enabled: false,
+  },
+  yAxis: {
+    title: {
+      text: "Values",
+    },
+  },
+  colors: ["#5570F1", "#FFCC91", "#97A5EB"],
+  series: [
+    {
+      data: [
+        {
+          y: 60,
+        },
+        {
+          y: 25,
+        },
+        {
+          y: 15,
+        },
+      ],
+      size: "100%",
+      innerSize: "80%",
+      dataLabels: {
+        enabled: false,
+        labelConnector: false,
+      },
+    },
+  ],
+});
+
 const Home = () => {
   return (
     <div className="home_wrapper">
@@ -97,7 +170,52 @@ const Home = () => {
               </div>
             </div>
             <div className="marketing_graph">
-              <div className="pie_graph">Pie Graph</div>
+              <div className="pie_graph">
+                <div className="pie_graph_heading">
+                  <p className="pie_heading">Marketting</p>
+                  <div className="select_icon">
+                    <p className="week">This Week</p>
+                    <img src={ChevDown} alt="chev_down" className="chev_down" />
+                  </div>
+                </div>
+                <div className="pie_graph_body">
+                  <div className="pie_chart_indicators">
+                    <div className="indicators">
+                      <div
+                        className="indicator"
+                        style={{
+                          background: "#5570F1",
+                        }}
+                      />
+                      <p className="indicator_name">Acquistion</p>
+                    </div>
+                    <div className="indicators">
+                      <div
+                        className="indicator"
+                        style={{
+                          background: "#FFCC91",
+                        }}
+                      />
+                      <p className="indicator_name">Purchase</p>
+                    </div>
+                    <div className="indicators">
+                      <div
+                        className="indicator"
+                        style={{
+                          background: "#97A5EB",
+                        }}
+                      />
+                      <p className="indicator_name">Retention</p>
+                    </div>
+                  </div>
+                  <div className="pie_chart">
+                    <HighchartsReact
+                      highcharts={Highcharts}
+                      options={getOptions("pie")}
+                    />
+                  </div>
+                </div>
+              </div>
               <div className="marketing_section">
                 <div className="marketing_card">
                   <Card cardData={allProducts} />

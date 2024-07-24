@@ -52,14 +52,73 @@
 
 .pie_graph {
   flex-basis: 50%;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
+.pie_graph_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 20%;
+}
+
+.pie_heading {
+  font-family: "Poppins-Medium";
+  font-size: 16px;
+  font-weight: 500;
+  color: #45464e;
+}
+
+.pie_graph_body {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pie_chart {
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie_chart_indicators {
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .marketing_section {
   display: flex;
   flex-direction: column;
   gap: 1em;
   flex-basis: 50%;
+}
+
+.indicator {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+}
+
+.indicator_name {
+  font-family: "Poppins-Regular";
+  font-size: 11px;
+  font-weight: 400;
+  color: #a6a8b1;
+}
+
+.indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45em;
 }
 
 .marketing_card {
